@@ -9,7 +9,8 @@
 
 class Shader {
 public:
-    Shader(const char* vertexShaderPath, const char* fragmentShaderPath);
+    Shader() {};
+    Shader(const std::string dirName);
     ~Shader();
     void use();
     inline unsigned int getShaderID() { return shaderID; };

@@ -2,12 +2,12 @@
 
 Shader::~Shader() {};
 
-Shader::Shader(const char* vertexShaderPath, const char* fragmentShaderPath) {
+Shader::Shader(const std::string dirName) {
     std::string vertexShaderCode;
     std::string fragmentShaderCode;
 
-    std::ifstream vertexShaderFile(vertexShaderPath);
-    std::ifstream fragmentShaderFile(fragmentShaderPath);
+    std::ifstream vertexShaderFile(("../shaders/" + dirName + "/" + dirName + ".vs"));
+    std::ifstream fragmentShaderFile(("../shaders/" + dirName + "/" + dirName + ".fs"));
 
     std::stringstream vertexShaderStream;
     std::stringstream fragmentShaderStream;

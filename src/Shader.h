@@ -1,14 +1,17 @@
 #ifndef SHADER_H
 #define SHADER_H
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <iostream>
+#include <fstream>
+#include <sstream>
 #include <glad/glad.h>
 
-typedef unsigned int Shader;
-
-Shader loadShader(char* shader_name);
-
-void useShader(Shader shader);
+class Shader {
+public:
+	Shader(const std::string shaderName);
+	~Shader();
+	void use();
+private:
+	unsigned int shaderProgram;
+};
 
 #endif

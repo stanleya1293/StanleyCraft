@@ -6,12 +6,12 @@
 
 class Window {
 public:
-	Window(int width, int height, std::string title);
+	Window();
 	~Window();
 	bool isRunning();
 	void update();
 private:
-	GLFWwindow* windowID;
+	GLFWwindow* m_window;
 };
 
-#endif WINDOW_H
+#endif

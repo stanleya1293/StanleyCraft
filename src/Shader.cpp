@@ -1,77 +1,67 @@
 #include "Shader.h"
 
-Shader::Shader(const std::string shaderName) : shaderProgram(0) {
-	std::string shaderPath = "../shaders/" + shaderName + "/" + shaderName;
-	std::string vertPath = shaderPath + ".vs";
-	std::string fragPath = shaderPath + ".fs";
+Shader::Shader(std::string shaderName) : m_shader(0)
+{
+	std::string vShaderPath = "../shaders/" + shaderName + "/" + shaderName + ".vs";
+	std::string fShaderPath = "../shaders/" + shaderName + "/" + shaderName + ".fs";
 
-	std::ifstream vertFile(vertPath);
-	std::ifstream fragFile(fragPath);
+	std::stringstream vBuffer;
+	std::stringstream fBuffer;
+	
+	std::ifstream vFile;
+	std::ifstream fFile;
+	vFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
+	fFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
+ 	
+	std::string vShaderSrcStr;
+	std::string fShaderSrcStr;
+	try {
+		vFile.open(vShaderPath);
+		fFile.open(fShaderPath);
 
-	vertFile.exceptions(std::ifstream::badbit | std::ifstream::failbit);
-	fragFile.exceptions(std::ifstream::badbit | std::ifstream::failbit);
+		vBuffer << vFile.rdbuf();
+		fBuffer << fFile.rdbuf();
+		
+		vShaderSrcStr = vBuffer.str();
+		fShaderSrcStr = fBuffer.str();
 
-	std::string vertSrc;
-	std::string fragSrc;
-
-	try {		
-		std::stringstream vertFileBuffer;
-		vertFileBuffer << vertFile.rdbuf();
-		vertSrc = vertFileBuffer.str();
-
-		std::stringstream fragFileBuffer;
-		fragFileBuffer << fragFile.rdbuf();
-		fragSrc = fragFileBuffer.str();
+		vFile.close();
+		fFile.close();
 	}
 	catch (std::ifstream::failure e) {
-		std::cout << "Error opening shader files!" << std::endl;
-		return;
+		std::cout << "ERROR LOADING SHADER FILES" << std::endl;
 	}
+	
+	unsigned int vShader;
+	unsigned int fShader;
+	
+	const char* vShaderSrc = vShaderSrcStr.c_str();
+	const char* fShaderSrc = fShaderSrcStr.c_str();
 
-	vertFile.close();
-	fragFile.close();
 
-	unsigned int vertShader;
-	unsigned int fragShader;
-
-	vertShader = glCreateShader(GL_VERTEX_SHADER);
-	fragShader = glCreateShader(GL_FRAGMENT_SHADER);
-
-	const char* vertShaderCode = vertSrc.c_str();
-	const char* fragShaderCode = fragSrc.c_str();
-
-	glShaderSource(vertShader, 1, &vertShaderCode, NULL);
-	glShaderSource(fragShader, 1, &fragShaderCode, NULL);
-
-	int success;
-	char infoLog[512];
-	glCompileShader(vertShader);
-	glGetShaderiv(vertShader, GL_COMPILE_STATUS, &success);
-	if (!success) {
-		glGetShaderInfoLog(vertShader, 512, NULL, infoLog);
-		std::cout << "Error compiling vertex shader: " << infoLog << std::endl;
-	}	
-
-	glCompileShader(fragShader);
-	glGetShaderiv(fragShader, GL_COMPILE_STATUS, &success);
-	if (!success) {
-		glGetShaderInfoLog(fragShader, 512, NULL, infoLog);
-		std::cout << "Error compiling fragment shader: " << infoLog << std::endl;
-	}
-
-	shaderProgram = glCreateProgram();
-	glAttachShader(shaderProgram, vertShader);
-	glAttachShader(shaderProgram, fragShader);
-	glLinkProgram(shaderProgram);
-
-	glDeleteShader(vertShader);
-	glDeleteShader(fragShader);
+	vShader = glCreateShader(GL_VERTEX_SHADER);
+	fShader = glCreateShader(GL_FRAGMENT_SHADER);
+	glShaderSource(vShader, 1, &vShaderSrc, NULL);
+	glShaderSource(fShader, 1, &fShaderSrc, NULL);
+	
+	glCompileShader(vShader);
+	glCompileShader(fShader);
+	
+	m_shader = glCreateProgram();
+	glAttachShader(m_shader, vShader);
+	glAttachShader(m_shader, fShader);
+	glLinkProgram(m_shader);
+	
+	glDeleteShader(vShader);
+	glDeleteShader(fShader);
 }
 
-void Shader::use() {
-	glUseProgram(shaderProgram);
+Shader::~Shader() 
+{
+	glDeleteProgram(m_shader);
 }
 
-Shader::~Shader() {
-	glDeleteProgram(shaderProgram);
+void Shader::use() 
+{
+	glUseProgram(m_shader);
 }

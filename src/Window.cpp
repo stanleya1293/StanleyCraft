@@ -1,38 +1,38 @@
 #include "Window.h"
 
-Window::Window(int width, int height, std::string title) {
-	if (!glfwInit()) {
-		std::cout << "Error initializing GLFW!" << std::endl;
+Window::Window() 
+	: m_window(NULL) 
+{
+	if (!glfwInit()) 
+	{
+		std::cout << "ERROR: GLFW INIT FAILED" << std::endl;
 	}
-	windowID = glfwCreateWindow(width, height, title.c_str(), NULL, NULL);
-	if (!windowID) {
-		std::cout << "Error creating window!" << std::endl;
+	m_window = glfwCreateWindow(800, 800, "StanleyCraft", NULL, NULL);
+	if (!m_window) 
+	{
+		std::cout << "ERROR: WINDOW CREATION FAILED" << std::endl;
 	}
-	glfwMakeContextCurrent(windowID);
-
-	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-		std::cout << "Error initializing GLAD!" << std::endl;
-	}
-
-	glViewport(0, 0, width, height);
-}
-
-bool Window::isRunning() {
-	if (glfwWindowShouldClose(windowID)) {
-		return false;
-	}
-	else {
-		return true;
+	glfwMakeContextCurrent(m_window);
+	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) 
+	{
+		std::cout << "ERROR: GLAD GL LOADING FAILED" << std::endl;
 	}
 }
 
-void Window::update() {
-	glfwSwapBuffers(windowID);
+Window::~Window() 
+{
+	glfwDestroyWindow(m_window);
+	glfwTerminate();
+}
+
+bool Window::isRunning() 
+{
+	return (!glfwWindowShouldClose(m_window));	
+}
+
+void Window::update() 
+{
+	glfwSwapBuffers(m_window);
 	glfwPollEvents();
 	glClear(GL_COLOR_BUFFER_BIT);
-}
-
-Window::~Window() {
-	glfwDestroyWindow(windowID);
-	glfwTerminate();
 }

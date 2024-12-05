@@ -15,7 +15,8 @@ Shader::Shader(std::string shaderName) : m_shader(0)
  	
 	std::string vShaderSrcStr;
 	std::string fShaderSrcStr;
-	try {
+	try 
+	{
 		vFile.open(vShaderPath);
 		fFile.open(fShaderPath);
 
@@ -28,7 +29,8 @@ Shader::Shader(std::string shaderName) : m_shader(0)
 		vFile.close();
 		fFile.close();
 	}
-	catch (std::ifstream::failure e) {
+	catch (std::ifstream::failure e) 
+	{
 		std::cout << "ERROR LOADING SHADER FILES" << std::endl;
 	}
 	
@@ -44,8 +46,26 @@ Shader::Shader(std::string shaderName) : m_shader(0)
 	glShaderSource(vShader, 1, &vShaderSrc, NULL);
 	glShaderSource(fShader, 1, &fShaderSrc, NULL);
 	
+	int v_success;
+	char v_infolog[512];
+	int f_success;
+	char f_infolog[512];
+	
 	glCompileShader(vShader);
+	glGetShaderiv(vShader, GL_COMPILE_STATUS, &v_success);
+	if (!v_success) 
+	{
+		glGetShaderInfoLog(vShader, 512, NULL, v_infolog);
+		std::cout << "ERROR COMPILING VERTEX SHADER: " << v_infolog << std::endl;
+	}
+
 	glCompileShader(fShader);
+	glGetShaderiv(fShader, GL_COMPILE_STATUS, &f_success);
+	if (!f_success) 
+	{
+		glGetShaderInfoLog(fShader, 512, NULL, f_infolog);
+		std::cout << "ERROR COMPILING FRAGMENT SHADER: " << f_infolog << std::endl;
+	}
 	
 	m_shader = glCreateProgram();
 	glAttachShader(m_shader, vShader);
@@ -61,7 +81,7 @@ Shader::~Shader()
 	glDeleteProgram(m_shader);
 }
 
-void Shader::use() 
+void Shader::use() const 
 {
 	glUseProgram(m_shader);
 }

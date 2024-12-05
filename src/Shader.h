@@ -11,7 +11,7 @@ class Shader
 public:
 	Shader(std::string shaderName);
 	~Shader();
-	void use();
+	void use() const;
 private:
 	unsigned int m_shader;
 };

@@ -1,7 +1,7 @@
 #include "Game.h"
 
 
-const float blockData[] = 
+const float block_data[] = 
 {
 	-0.5f, -0.5f, -0.5f,  0.0f,  0.0f,
 	 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,
@@ -58,12 +58,11 @@ Game::~Game()
 
 void Game::run() 
 {
-	Mesh block = Mesh(blockData);
-	Shader blockShader = Shader("block");
+	Mesh block = Mesh(block_data, 36);
+	Shader block_shader = Shader("block");
 	while (m_window.isRunning()) 
 	{
-		blockShader.use();
-		block.render();
+		block.render(block_shader);
 		m_window.update();
 	}
 }

@@ -1,7 +1,7 @@
 #include "Game.h"
 
 int main() {
-	Game StanleyCraft;
-	StanleyCraft.run();
-	return 0;
+  Game StanleyCraft;
+  StanleyCraft.run();
+  return 0;
 }

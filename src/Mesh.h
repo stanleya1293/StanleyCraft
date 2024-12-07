@@ -1,18 +1,19 @@
 #ifndef MESH_H
 #define MESH_H
-#include <glad/glad.h>
 #include "Shader.h"
+#include <glad/glad.h>
 
-class Mesh 
-{
+class Mesh {
 public:
-	Mesh(const float vertex_data[], const unsigned int vertex_count);
-	~Mesh();
-	void render(const Shader& shader);
+  Mesh(const float vertexData[], const unsigned int vertexCount, Shader shader);
+  ~Mesh();
+  void render();
+
 private:
-	unsigned int m_VAO;
-	unsigned int m_VBO;
-	int m_vertex_count;
+  unsigned int m_VAO;
+  unsigned int m_VBO;
+  Shader m_shader;
+  int m_vertexCount;
 };
 
 #endif

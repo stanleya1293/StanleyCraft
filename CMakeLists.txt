@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 project(StanleyCraft)
-add_executable(StanleyCraft src/main.cpp src/Game.cpp src/Window.cpp src/Mesh.cpp src/Shader.cpp src/Camera.cpp)
+add_executable(StanleyCraft src/main.cpp src/Game.cpp src/Window.cpp src/Model.cpp src/Shader.cpp src/Camera.cpp src/Renderer.cpp "src/Libs.h")
 target_include_directories(StanleyCraft PRIVATE ${CMAKE_SOURCE_DIR}/src)
 add_subdirectory(./lib/glad)
 target_link_libraries(StanleyCraft PRIVATE glad)

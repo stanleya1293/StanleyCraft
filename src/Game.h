@@ -1,11 +1,13 @@
 #ifndef GAME_H
 #define GAME_H
-#include "Mesh.h"
+#include "Libs.h"
+#include "Window.h"
 #include "Renderer.h"
 #include "Shader.h"
-#include "Window.h"
+#include "Model.h"
 
-class Game {
+class Game 
+{
 public:
   Game();
   ~Game();

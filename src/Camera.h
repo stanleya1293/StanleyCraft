@@ -1,18 +1,17 @@
 #ifndef CAMERA_H
 #define CAMERA_H
-#include "Shader.h"
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
+#include "Libs.h"
 
-enum Direction { Left, Right, Forward, Backward };
+enum Direction 
+{ Left,	Right, Forward, Backward };
 
-class Camera {
+class Camera 
+{
 public:
   Camera();
   ~Camera();
-  inline glm::mat4 getView() { return m_view };
-  inline glm::mat4 getProjection() { return m_projection };
+  inline glm::mat4 getView() { return m_view; };
+  inline glm::mat4 getProjection() { return m_projection; };
   void update();
   void move(Direction direction);
 

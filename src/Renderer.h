@@ -1,20 +1,21 @@
 #ifndef RENDERER_H
 #define RENDERER_H
+#include "Libs.h"
+#include "Model.h"
 #include "Camera.h"
-#include "Mesh.h"
-#include <iostream>
-#include <vector>
 
-class Renderer {
+
+class Renderer 
+{
 public:
   Renderer();
   Renderer(Camera camera);
   ~Renderer();
   void update();
-  void addTarget(Mesh mesh);
+  void addTarget(Model model);
 
 private:
-  std::vector<Mesh> m_targets;
+  std::vector<Model> m_targets;
   Camera m_camera;
 };
 

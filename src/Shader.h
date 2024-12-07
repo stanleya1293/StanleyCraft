@@ -1,10 +1,6 @@
 #ifndef SHADER_H
 #define SHADER_H
-#include <iostream>
-#include <string>
-#include <sstream>
-#include <fstream>
-#include <glad/glad.h>
+#include "Libs.h"
 
 class Shader 
 {
@@ -12,6 +8,7 @@ public:
 	Shader(std::string shaderName);
 	~Shader();
 	void use() const;
+	inline unsigned int getShaderID() { return m_shader; };
 private:
 	unsigned int m_shader;
 };

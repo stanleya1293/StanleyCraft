@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include "Window.h"
+#include "Shader.h"
 
 class Game 
 {

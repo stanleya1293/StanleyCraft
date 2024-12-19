@@ -6,8 +6,10 @@ Game::Game() :
 
 void Game::run() 
 {
+	Shader shader = Shader("default");	
 	while (m_window.running())
 	{
+		shader.use();
 		m_window.update();
 	}
 }

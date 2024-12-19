@@ -6,7 +6,7 @@
 #include <string>
 #include <fstream>
 #include <glad/glad.h>
-
+#include <GL/gl.h>
 
 class Shader 
 {

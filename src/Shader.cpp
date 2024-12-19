@@ -1,7 +1,5 @@
 #include "Shader.h"
-#include <iostream>
-#include <sstream>
-#include <string>
+
 
 //Default Constructor
 Shader::Shader() : m_shaderID(0)  
@@ -16,11 +14,13 @@ Shader::Shader(const std::string &shaderDir) : m_shaderID(glCreateProgram())
 {
 	std::string vShaderDir = "../shaders/" + shaderDir + "/" + shaderDir + ".vs";
 	std::string fShaderDir = "../shaders/" + shaderDir + "/" + shaderDir + ".fs";
-	const char* vShaderSrc = getShaderSrc(vShaderDir).c_str();
-	const char* fShaderSrc = getShaderSrc(fShaderDir).c_str();
-	
-	std::cout << vShaderSrc << std::endl;
-	std::cout << fShaderSrc << std::endl;
+	std::string vShaderSrcStr = getShaderSrc(vShaderDir);
+	std::string fShaderSrcStr = getShaderSrc(fShaderDir);
+
+	const char* vShaderSrc = vShaderSrcStr.c_str();
+	const char* fShaderSrc = fShaderSrcStr.c_str();
+
+
 
 	unsigned int vShader = glCreateShader(GL_VERTEX_SHADER);
 	unsigned int fShader = glCreateShader(GL_FRAGMENT_SHADER);
@@ -64,8 +64,7 @@ void Shader::use()
 }
 
 /*
- * Helper function that reads shader content from a file and 
- * converts it to a C string.
+ * Helper function that reads shader content from a file and returns a std::string.
  */
 const std::string Shader::getShaderSrc(const std::string &shaderPath) 
 {

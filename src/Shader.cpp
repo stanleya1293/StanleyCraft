@@ -58,7 +58,7 @@ Shader::Shader(const std::string &shaderDir) : m_shaderID(glCreateProgram())
 /*
  * Sets this object as the current active shader program.
  */ 
-void Shader::use() 
+void Shader::use() const 
 {
 	glUseProgram(m_shaderID);
 }

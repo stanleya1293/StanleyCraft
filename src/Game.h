@@ -3,6 +3,8 @@
 
 #include "Window.h"
 #include "Shader.h"
+#include "Model.h"
+
 
 class Game 
 {

@@ -6,10 +6,22 @@ Game::Game() :
 
 void Game::run() 
 {
-	Shader shader = Shader("default");	
+	Shader shader = Shader("default");
+	std::vector<Vertex> vertices = 
+	{
+		{-0.5f,  0.5f,  0.0f},
+		{-0.5f, -0.5f,  0.0f},
+		{ 0.5f,  0.5f,  0.0f},
+		{ 0.5f, -0.5f,  0.0f},
+		{-0.5f, -0.5f,  0.0f},
+		{ 0.5f,  0.5f,  0.0f},
+	};
+
+	Model square(vertices);
+
 	while (m_window.running())
 	{
-		shader.use();
+		square.draw(shader);
 		m_window.update();
 	}
 }

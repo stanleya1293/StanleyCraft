@@ -13,7 +13,7 @@ class Shader
 public:
 	Shader();
 	Shader(const std::string &shaderDir);
-	void use();
+	void use() const;
 	~Shader();
 private:
 	const std::string getShaderSrc(const std::string &shaderPath);

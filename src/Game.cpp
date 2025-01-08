@@ -1,27 +1,30 @@
 #include "Game.h"
 
-Game::Game() : 
-	m_window(Window(800, 800, "Test")) //change later to make null Window, for now leave.
-{}
 
-void Game::run() 
+namespace StanleyCraft
 {
-	Shader shader = Shader("default");
-	std::vector<Vertex> vertices = 
+	Game::Game()
 	{
-		{-0.5f,  0.5f,  0.0f},
-		{-0.5f, -0.5f,  0.0f},
-		{ 0.5f,  0.5f,  0.0f},
-		{ 0.5f, -0.5f,  0.0f},
-		{-0.5f, -0.5f,  0.0f},
-		{ 0.5f,  0.5f,  0.0f},
-	};
+		glfwInit();
+		m_window = glfwCreateWindow(800, 800, "StanleyCraft", NULL, NULL); //might want to make resizable
+		glfwMakeContextCurrent(m_window);
+		gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
+		
+	}
 
-	Model square(vertices);
-
-	while (m_window.running())
+	Game::~Game()
 	{
-		square.draw(shader);
-		m_window.update();
+		glfwDestroyWindow(m_window);
+		glfwTerminate();
+	}
+
+	void Game::run()
+	{
+		while (!glfwWindowShouldClose(m_window))
+		{
+			glClear(GL_COLOR_BUFFER_BIT);
+			glfwSwapBuffers(m_window);
+			glfwPollEvents();
+		}
 	}
 }

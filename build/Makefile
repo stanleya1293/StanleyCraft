@@ -257,64 +257,19 @@ src/Game.s:
 .PHONY : src/Game.s
 
 # target to build an object file
-src/Model.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/Model.o
-.PHONY : src/Model.o
+src/StanleyCraft.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/StanleyCraft.o
+.PHONY : src/StanleyCraft.o
 
 # target to preprocess a source file
-src/Model.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/Model.i
-.PHONY : src/Model.i
+src/StanleyCraft.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/StanleyCraft.i
+.PHONY : src/StanleyCraft.i
 
 # target to generate assembly for a file
-src/Model.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/Model.s
-.PHONY : src/Model.s
-
-# target to build an object file
-src/Shader.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/Shader.o
-.PHONY : src/Shader.o
-
-# target to preprocess a source file
-src/Shader.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/Shader.i
-.PHONY : src/Shader.i
-
-# target to generate assembly for a file
-src/Shader.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/Shader.s
-.PHONY : src/Shader.s
-
-# target to build an object file
-src/Window.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/Window.o
-.PHONY : src/Window.o
-
-# target to preprocess a source file
-src/Window.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/Window.i
-.PHONY : src/Window.i
-
-# target to generate assembly for a file
-src/Window.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/Window.s
-.PHONY : src/Window.s
-
-# target to build an object file
-src/main.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/main.o
-.PHONY : src/main.o
-
-# target to preprocess a source file
-src/main.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/main.i
-.PHONY : src/main.i
-
-# target to generate assembly for a file
-src/main.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/main.s
-.PHONY : src/main.s
+src/StanleyCraft.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StanleyCraft.dir/build.make CMakeFiles/StanleyCraft.dir/src/StanleyCraft.s
+.PHONY : src/StanleyCraft.s
 
 # Help Target
 help:
@@ -339,18 +294,9 @@ help:
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
-	@echo "... src/Model.o"
-	@echo "... src/Model.i"
-	@echo "... src/Model.s"
-	@echo "... src/Shader.o"
-	@echo "... src/Shader.i"
-	@echo "... src/Shader.s"
-	@echo "... src/Window.o"
-	@echo "... src/Window.i"
-	@echo "... src/Window.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/StanleyCraft.o"
+	@echo "... src/StanleyCraft.i"
+	@echo "... src/StanleyCraft.s"
 .PHONY : help
 
 

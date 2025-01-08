@@ -10,10 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/stanleya1293/Desktop/Projects/StanleyCraft/lib/glad/src/glad.c" "CMakeFiles/StanleyCraft.dir/lib/glad/src/glad.o" "gcc" "CMakeFiles/StanleyCraft.dir/lib/glad/src/glad.o.d"
   "/home/stanleya1293/Desktop/Projects/StanleyCraft/src/Game.cpp" "CMakeFiles/StanleyCraft.dir/src/Game.o" "gcc" "CMakeFiles/StanleyCraft.dir/src/Game.o.d"
-  "/home/stanleya1293/Desktop/Projects/StanleyCraft/src/Model.cpp" "CMakeFiles/StanleyCraft.dir/src/Model.o" "gcc" "CMakeFiles/StanleyCraft.dir/src/Model.o.d"
-  "/home/stanleya1293/Desktop/Projects/StanleyCraft/src/Shader.cpp" "CMakeFiles/StanleyCraft.dir/src/Shader.o" "gcc" "CMakeFiles/StanleyCraft.dir/src/Shader.o.d"
-  "/home/stanleya1293/Desktop/Projects/StanleyCraft/src/Window.cpp" "CMakeFiles/StanleyCraft.dir/src/Window.o" "gcc" "CMakeFiles/StanleyCraft.dir/src/Window.o.d"
-  "/home/stanleya1293/Desktop/Projects/StanleyCraft/src/main.cpp" "CMakeFiles/StanleyCraft.dir/src/main.o" "gcc" "CMakeFiles/StanleyCraft.dir/src/main.o.d"
+  "/home/stanleya1293/Desktop/Projects/StanleyCraft/src/StanleyCraft.cpp" "CMakeFiles/StanleyCraft.dir/src/StanleyCraft.o" "gcc" "CMakeFiles/StanleyCraft.dir/src/StanleyCraft.o.d"
   )
 
 # Targets to which this target links.

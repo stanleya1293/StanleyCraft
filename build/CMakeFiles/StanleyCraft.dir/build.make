@@ -69,52 +69,24 @@ include CMakeFiles/StanleyCraft.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/StanleyCraft.dir/flags.make
 
-CMakeFiles/StanleyCraft.dir/src/main.o: CMakeFiles/StanleyCraft.dir/flags.make
-CMakeFiles/StanleyCraft.dir/src/main.o: ../src/main.cpp
-CMakeFiles/StanleyCraft.dir/src/main.o: CMakeFiles/StanleyCraft.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stanleya1293/Desktop/Projects/StanleyCraft/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/StanleyCraft.dir/src/main.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StanleyCraft.dir/src/main.o -MF CMakeFiles/StanleyCraft.dir/src/main.o.d -o CMakeFiles/StanleyCraft.dir/src/main.o -c /home/stanleya1293/Desktop/Projects/StanleyCraft/src/main.cpp
+CMakeFiles/StanleyCraft.dir/src/StanleyCraft.o: CMakeFiles/StanleyCraft.dir/flags.make
+CMakeFiles/StanleyCraft.dir/src/StanleyCraft.o: ../src/StanleyCraft.cpp
+CMakeFiles/StanleyCraft.dir/src/StanleyCraft.o: CMakeFiles/StanleyCraft.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stanleya1293/Desktop/Projects/StanleyCraft/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/StanleyCraft.dir/src/StanleyCraft.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StanleyCraft.dir/src/StanleyCraft.o -MF CMakeFiles/StanleyCraft.dir/src/StanleyCraft.o.d -o CMakeFiles/StanleyCraft.dir/src/StanleyCraft.o -c /home/stanleya1293/Desktop/Projects/StanleyCraft/src/StanleyCraft.cpp
 
-CMakeFiles/StanleyCraft.dir/src/main.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/StanleyCraft.dir/src/main.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stanleya1293/Desktop/Projects/StanleyCraft/src/main.cpp > CMakeFiles/StanleyCraft.dir/src/main.i
+CMakeFiles/StanleyCraft.dir/src/StanleyCraft.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/StanleyCraft.dir/src/StanleyCraft.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stanleya1293/Desktop/Projects/StanleyCraft/src/StanleyCraft.cpp > CMakeFiles/StanleyCraft.dir/src/StanleyCraft.i
 
-CMakeFiles/StanleyCraft.dir/src/main.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StanleyCraft.dir/src/main.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stanleya1293/Desktop/Projects/StanleyCraft/src/main.cpp -o CMakeFiles/StanleyCraft.dir/src/main.s
-
-CMakeFiles/StanleyCraft.dir/src/Shader.o: CMakeFiles/StanleyCraft.dir/flags.make
-CMakeFiles/StanleyCraft.dir/src/Shader.o: ../src/Shader.cpp
-CMakeFiles/StanleyCraft.dir/src/Shader.o: CMakeFiles/StanleyCraft.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stanleya1293/Desktop/Projects/StanleyCraft/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/StanleyCraft.dir/src/Shader.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StanleyCraft.dir/src/Shader.o -MF CMakeFiles/StanleyCraft.dir/src/Shader.o.d -o CMakeFiles/StanleyCraft.dir/src/Shader.o -c /home/stanleya1293/Desktop/Projects/StanleyCraft/src/Shader.cpp
-
-CMakeFiles/StanleyCraft.dir/src/Shader.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/StanleyCraft.dir/src/Shader.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stanleya1293/Desktop/Projects/StanleyCraft/src/Shader.cpp > CMakeFiles/StanleyCraft.dir/src/Shader.i
-
-CMakeFiles/StanleyCraft.dir/src/Shader.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StanleyCraft.dir/src/Shader.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stanleya1293/Desktop/Projects/StanleyCraft/src/Shader.cpp -o CMakeFiles/StanleyCraft.dir/src/Shader.s
-
-CMakeFiles/StanleyCraft.dir/src/Window.o: CMakeFiles/StanleyCraft.dir/flags.make
-CMakeFiles/StanleyCraft.dir/src/Window.o: ../src/Window.cpp
-CMakeFiles/StanleyCraft.dir/src/Window.o: CMakeFiles/StanleyCraft.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stanleya1293/Desktop/Projects/StanleyCraft/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/StanleyCraft.dir/src/Window.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StanleyCraft.dir/src/Window.o -MF CMakeFiles/StanleyCraft.dir/src/Window.o.d -o CMakeFiles/StanleyCraft.dir/src/Window.o -c /home/stanleya1293/Desktop/Projects/StanleyCraft/src/Window.cpp
-
-CMakeFiles/StanleyCraft.dir/src/Window.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/StanleyCraft.dir/src/Window.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stanleya1293/Desktop/Projects/StanleyCraft/src/Window.cpp > CMakeFiles/StanleyCraft.dir/src/Window.i
-
-CMakeFiles/StanleyCraft.dir/src/Window.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StanleyCraft.dir/src/Window.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stanleya1293/Desktop/Projects/StanleyCraft/src/Window.cpp -o CMakeFiles/StanleyCraft.dir/src/Window.s
+CMakeFiles/StanleyCraft.dir/src/StanleyCraft.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StanleyCraft.dir/src/StanleyCraft.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stanleya1293/Desktop/Projects/StanleyCraft/src/StanleyCraft.cpp -o CMakeFiles/StanleyCraft.dir/src/StanleyCraft.s
 
 CMakeFiles/StanleyCraft.dir/src/Game.o: CMakeFiles/StanleyCraft.dir/flags.make
 CMakeFiles/StanleyCraft.dir/src/Game.o: ../src/Game.cpp
 CMakeFiles/StanleyCraft.dir/src/Game.o: CMakeFiles/StanleyCraft.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stanleya1293/Desktop/Projects/StanleyCraft/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/StanleyCraft.dir/src/Game.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stanleya1293/Desktop/Projects/StanleyCraft/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/StanleyCraft.dir/src/Game.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StanleyCraft.dir/src/Game.o -MF CMakeFiles/StanleyCraft.dir/src/Game.o.d -o CMakeFiles/StanleyCraft.dir/src/Game.o -c /home/stanleya1293/Desktop/Projects/StanleyCraft/src/Game.cpp
 
 CMakeFiles/StanleyCraft.dir/src/Game.i: cmake_force
@@ -125,24 +97,10 @@ CMakeFiles/StanleyCraft.dir/src/Game.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StanleyCraft.dir/src/Game.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stanleya1293/Desktop/Projects/StanleyCraft/src/Game.cpp -o CMakeFiles/StanleyCraft.dir/src/Game.s
 
-CMakeFiles/StanleyCraft.dir/src/Model.o: CMakeFiles/StanleyCraft.dir/flags.make
-CMakeFiles/StanleyCraft.dir/src/Model.o: ../src/Model.cpp
-CMakeFiles/StanleyCraft.dir/src/Model.o: CMakeFiles/StanleyCraft.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stanleya1293/Desktop/Projects/StanleyCraft/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/StanleyCraft.dir/src/Model.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StanleyCraft.dir/src/Model.o -MF CMakeFiles/StanleyCraft.dir/src/Model.o.d -o CMakeFiles/StanleyCraft.dir/src/Model.o -c /home/stanleya1293/Desktop/Projects/StanleyCraft/src/Model.cpp
-
-CMakeFiles/StanleyCraft.dir/src/Model.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/StanleyCraft.dir/src/Model.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stanleya1293/Desktop/Projects/StanleyCraft/src/Model.cpp > CMakeFiles/StanleyCraft.dir/src/Model.i
-
-CMakeFiles/StanleyCraft.dir/src/Model.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StanleyCraft.dir/src/Model.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stanleya1293/Desktop/Projects/StanleyCraft/src/Model.cpp -o CMakeFiles/StanleyCraft.dir/src/Model.s
-
 CMakeFiles/StanleyCraft.dir/lib/glad/src/glad.o: CMakeFiles/StanleyCraft.dir/flags.make
 CMakeFiles/StanleyCraft.dir/lib/glad/src/glad.o: ../lib/glad/src/glad.c
 CMakeFiles/StanleyCraft.dir/lib/glad/src/glad.o: CMakeFiles/StanleyCraft.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stanleya1293/Desktop/Projects/StanleyCraft/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/StanleyCraft.dir/lib/glad/src/glad.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stanleya1293/Desktop/Projects/StanleyCraft/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/StanleyCraft.dir/lib/glad/src/glad.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/StanleyCraft.dir/lib/glad/src/glad.o -MF CMakeFiles/StanleyCraft.dir/lib/glad/src/glad.o.d -o CMakeFiles/StanleyCraft.dir/lib/glad/src/glad.o -c /home/stanleya1293/Desktop/Projects/StanleyCraft/lib/glad/src/glad.c
 
 CMakeFiles/StanleyCraft.dir/lib/glad/src/glad.i: cmake_force
@@ -155,21 +113,15 @@ CMakeFiles/StanleyCraft.dir/lib/glad/src/glad.s: cmake_force
 
 # Object files for target StanleyCraft
 StanleyCraft_OBJECTS = \
-"CMakeFiles/StanleyCraft.dir/src/main.o" \
-"CMakeFiles/StanleyCraft.dir/src/Shader.o" \
-"CMakeFiles/StanleyCraft.dir/src/Window.o" \
+"CMakeFiles/StanleyCraft.dir/src/StanleyCraft.o" \
 "CMakeFiles/StanleyCraft.dir/src/Game.o" \
-"CMakeFiles/StanleyCraft.dir/src/Model.o" \
 "CMakeFiles/StanleyCraft.dir/lib/glad/src/glad.o"
 
 # External object files for target StanleyCraft
 StanleyCraft_EXTERNAL_OBJECTS =
 
-StanleyCraft: CMakeFiles/StanleyCraft.dir/src/main.o
-StanleyCraft: CMakeFiles/StanleyCraft.dir/src/Shader.o
-StanleyCraft: CMakeFiles/StanleyCraft.dir/src/Window.o
+StanleyCraft: CMakeFiles/StanleyCraft.dir/src/StanleyCraft.o
 StanleyCraft: CMakeFiles/StanleyCraft.dir/src/Game.o
-StanleyCraft: CMakeFiles/StanleyCraft.dir/src/Model.o
 StanleyCraft: CMakeFiles/StanleyCraft.dir/lib/glad/src/glad.o
 StanleyCraft: CMakeFiles/StanleyCraft.dir/build.make
 StanleyCraft: lib/glfw-3.4/src/libglfw3.a
@@ -177,7 +129,7 @@ StanleyCraft: lib/glm/glm/libglm.a
 StanleyCraft: /usr/lib/x86_64-linux-gnu/librt.a
 StanleyCraft: /usr/lib/x86_64-linux-gnu/libm.so
 StanleyCraft: CMakeFiles/StanleyCraft.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/stanleya1293/Desktop/Projects/StanleyCraft/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable StanleyCraft"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/stanleya1293/Desktop/Projects/StanleyCraft/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable StanleyCraft"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/StanleyCraft.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,18 +1,20 @@
 #ifndef GAME_H
 #define GAME_H
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
 
-#include "Window.h"
-#include "Shader.h"
-#include "Model.h"
-
-
-class Game 
+namespace StanleyCraft
 {
-public: 
-	Game();
-	void run();
-private:
-	Window m_window;	
-};
+	class Game
+	{
+	public:
+		Game();
+		~Game();
+		void run();
+	private:
+		GLFWwindow* m_window;
+
+	};
+}
 
 #endif

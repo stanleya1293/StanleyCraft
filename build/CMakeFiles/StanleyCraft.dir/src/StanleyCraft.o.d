@@ -1,5 +1,5 @@
-CMakeFiles/StanleyCraft.dir/src/Game.o: \
- /home/stanleya1293/Desktop/Projects/StanleyCraft/src/Game.cpp \
+CMakeFiles/StanleyCraft.dir/src/StanleyCraft.o: \
+ /home/stanleya1293/Desktop/Projects/StanleyCraft/src/StanleyCraft.cpp \
  /usr/include/stdc-predef.h \
  /home/stanleya1293/Desktop/Projects/StanleyCraft/src/Game.h \
  /home/stanleya1293/Desktop/Projects/StanleyCraft/lib/glad/include/glad/glad.h \

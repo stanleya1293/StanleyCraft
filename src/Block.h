@@ -13,8 +13,8 @@ namespace StanleyCraft
             unsigned int m_shader;
             unsigned int m_vao;
             unsigned int m_vbo;
-                  
-    }
+            
+    };
 }
 
 #endif

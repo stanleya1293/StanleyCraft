@@ -13,7 +13,7 @@ namespace StanleyCraft
 		void run();
 	private:
 		GLFWwindow* m_window;
-
+		unsigned int m_shader;
 	};
 }
 

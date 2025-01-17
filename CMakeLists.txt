@@ -4,8 +4,8 @@ add_executable(StanleyCraft
 	src/StanleyCraft.cpp
 	src/Game.cpp
 	src/Entity.cpp
-	src/Block.cpp
-	lib/glad/src/glad.c)
+	
+	lib/glad/src/glad.c   "src/Mesh.h" "src/Mesh.cpp")
 
 add_subdirectory(lib/glfw-3.4)
 target_link_libraries(StanleyCraft glfw)

@@ -1,0 +1,27 @@
+# ninja log v5
+0	154	7614720041574022	CMakeFiles/StanleyCraft.dir/StanleyCraft.c.obj	fa43221e537278d6
+1	541	7614720591262196	StanleyCraft.exe	a785fd85877bd21b
+1	2344	7614720624230923	build.ninja	3ab6050dfe52982
+1	156	7614721488583047	CMakeFiles/StanleyCraft.dir/StanleyCraft.c.obj	fa43221e537278d6
+157	650	7614721490006043	StanleyCraft.exe	a785fd85877bd21b
+1	153	7614721976339938	CMakeFiles/StanleyCraft.dir/StanleyCraft.c.obj	fa43221e537278d6
+0	152	7614722390825597	CMakeFiles/StanleyCraft.dir/StanleyCraft.c.obj	fa43221e537278d6
+152	589	7614722391787222	StanleyCraft.exe	a785fd85877bd21b
+1	40	7614722559821117	CMakeFiles/StanleyCraft.dir/StanleyCraft.c.obj	fa43221e537278d6
+41	451	7614722560680593	StanleyCraft.exe	a785fd85877bd21b
+1	150	7614722839778696	CMakeFiles/StanleyCraft.dir/StanleyCraft.c.obj	fa43221e537278d6
+150	573	7614722840670406	StanleyCraft.exe	a785fd85877bd21b
+0	154	7614723064823331	CMakeFiles/StanleyCraft.dir/StanleyCraft.c.obj	fa43221e537278d6
+154	574	7614723065782694	StanleyCraft.exe	a785fd85877bd21b
+0	149	7614723475630738	CMakeFiles/StanleyCraft.dir/StanleyCraft.c.obj	fa43221e537278d6
+150	577	7614723476509796	StanleyCraft.exe	a785fd85877bd21b
+1	41	7614723630558823	CMakeFiles/StanleyCraft.dir/StanleyCraft.c.obj	fa43221e537278d6
+42	453	7614723631401201	StanleyCraft.exe	a785fd85877bd21b
+0	41	7614723742619179	CMakeFiles/StanleyCraft.dir/StanleyCraft.c.obj	fa43221e537278d6
+41	448	7614723743491696	StanleyCraft.exe	a785fd85877bd21b
+0	39	7614723830422117	CMakeFiles/StanleyCraft.dir/StanleyCraft.c.obj	fa43221e537278d6
+40	432	7614723831249953	StanleyCraft.exe	a785fd85877bd21b
+0	154	7614724760183744	CMakeFiles/StanleyCraft.dir/StanleyCraft.c.obj	fa43221e537278d6
+155	580	7614724761097161	StanleyCraft.exe	a785fd85877bd21b
+0	42	7614724854750586	CMakeFiles/StanleyCraft.dir/StanleyCraft.c.obj	fa43221e537278d6
+42	451	7614724855618845	StanleyCraft.exe	a785fd85877bd21b

@@ -1,0 +1,3 @@
+C:/Users/Arden Stanley/Desktop/StanleyCraft/build/CMakeFiles/StanleyCraft.dir
+C:/Users/Arden Stanley/Desktop/StanleyCraft/build/CMakeFiles/edit_cache.dir
+C:/Users/Arden Stanley/Desktop/StanleyCraft/build/CMakeFiles/rebuild_cache.dir

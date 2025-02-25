@@ -2,6 +2,7 @@
 #define SHADER_H
 #include <glad/glad.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef unsigned int Shader;
 

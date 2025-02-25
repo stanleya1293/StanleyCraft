@@ -49,18 +49,18 @@ cmake_ninja_workdir = C$:\Users\Arden$ Stanley\Desktop\StanleyCraft\build\
 
 build cmake_object_order_depends_target_StanleyCraft: phony || CMakeFiles\StanleyCraft.dir
 
-build CMakeFiles\StanleyCraft.dir\src\StanleyCraft.c.obj: C_COMPILER__StanleyCraft_Debug C$:\Users\Arden$ Stanley\Desktop\StanleyCraft\src\StanleyCraft.c || cmake_object_order_depends_target_StanleyCraft
+build CMakeFiles\StanleyCraft.dir\src\StanleyCraft.cpp.obj: CXX_COMPILER__StanleyCraft_Debug C$:\Users\Arden$ Stanley\Desktop\StanleyCraft\src\StanleyCraft.cpp || cmake_object_order_depends_target_StanleyCraft
   DEFINES = -DGLFW_DLL
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -external:I"C:\Users\Arden Stanley\Desktop\StanleyCraft\build\vcpkg_installed\x64-windows\include" -external:W0
   OBJECT_DIR = CMakeFiles\StanleyCraft.dir
   OBJECT_FILE_DIR = CMakeFiles\StanleyCraft.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\StanleyCraft.dir\
   TARGET_PDB = StanleyCraft.pdb
 
-build CMakeFiles\StanleyCraft.dir\src\Shader.c.obj: C_COMPILER__StanleyCraft_Debug C$:\Users\Arden$ Stanley\Desktop\StanleyCraft\src\Shader.c || cmake_object_order_depends_target_StanleyCraft
+build CMakeFiles\StanleyCraft.dir\src\Shader.cpp.obj: CXX_COMPILER__StanleyCraft_Debug C$:\Users\Arden$ Stanley\Desktop\StanleyCraft\src\Shader.cpp || cmake_object_order_depends_target_StanleyCraft
   DEFINES = -DGLFW_DLL
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -external:I"C:\Users\Arden Stanley\Desktop\StanleyCraft\build\vcpkg_installed\x64-windows\include" -external:W0
   OBJECT_DIR = CMakeFiles\StanleyCraft.dir
   OBJECT_FILE_DIR = CMakeFiles\StanleyCraft.dir\src
@@ -75,8 +75,8 @@ build CMakeFiles\StanleyCraft.dir\src\Shader.c.obj: C_COMPILER__StanleyCraft_Deb
 #############################################
 # Link the executable StanleyCraft.exe
 
-build StanleyCraft.exe: C_EXECUTABLE_LINKER__StanleyCraft_Debug CMakeFiles\StanleyCraft.dir\src\StanleyCraft.c.obj CMakeFiles\StanleyCraft.dir\src\Shader.c.obj | vcpkg_installed\x64-windows\debug\lib\glfw3dll.lib vcpkg_installed\x64-windows\debug\lib\glad.lib
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
+build StanleyCraft.exe: CXX_EXECUTABLE_LINKER__StanleyCraft_Debug CMakeFiles\StanleyCraft.dir\src\StanleyCraft.cpp.obj CMakeFiles\StanleyCraft.dir\src\Shader.cpp.obj | vcpkg_installed\x64-windows\debug\lib\glfw3dll.lib vcpkg_installed\x64-windows\debug\lib\glad.lib
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = vcpkg_installed\x64-windows\debug\lib\glfw3dll.lib  vcpkg_installed\x64-windows\debug\lib\glad.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\StanleyCraft.dir

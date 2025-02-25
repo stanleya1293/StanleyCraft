@@ -1,13 +1,22 @@
 #ifndef SHADER_H
 #define SHADER_H
+#include <string>
+#include <sstream>
+#include <fstream>
 #include <glad/glad.h>
-#include <stdio.h>
-#include <stdlib.h>
 
-typedef unsigned int Shader;
-
-Shader load_shader(const char* vertex_shader_path, const char* fragment_shader_path);
-
-void use_shader(Shader shader);
+class Shader {
+public:
+	Shader(const std::string &vertexPath, const std::string &fragmentPath);
+	void use() const;
+private:
+	enum Type {
+		Vertex,
+		Fragment
+	};
+	unsigned int program;
+private: 
+	unsigned int loadFile(const std::string &path, Type type) const;
+};
 
 #endif

@@ -1,11 +1,4 @@
-# ninja log v5
-0	162	7614735136918749	CMakeFiles/StanleyCraft.dir/StanleyCraft.c.obj	fa43221e537278d6
-245	683	7621652558150821	StanleyCraft.exe	c596bc45193e64c
-0	154	7621647270893504	CMakeFiles/StanleyCraft.dir/src/Shader.c.obj	5685724c1a6485
-1	2344	7621653167114839	build.ninja	3ab6050dfe52982
-10	337	7614751140078581	CMakeFiles/StanleyCraft.dir/Shader.c.obj	923dcfd0e461012a
-1	58	7621645555006837	CMakeFiles/StanleyCraft.dir/src/StanleyCraft.c.obj	d64d6d6a6098bbfb
-0	244	7621652556834825	CMakeFiles/StanleyCraft.dir/src/StanleyCraft.cpp.obj	a5f92cedde5ebfa1
-0	529	7621679268247514	CMakeFiles/StanleyCraft.dir/src/StanleyCraft.cpp.obj	a5f92cedde5ebfa1
-8	548	7621679268437568	CMakeFiles/StanleyCraft.dir/src/Shader.cpp.obj	d3660d377aaabcd2
-549	1444	7621679269779422	StanleyCraft.exe	a9addd260cbd26b1
+# ninja log v6
+9	320	7626719476553957	CMakeFiles/StanleyCraft.dir/src/StanleyCraft.cpp.obj	c4db036b577eee98
+14	343	7626719476609107	CMakeFiles/StanleyCraft.dir/src/Shader.cpp.obj	f0e1079ff8090fb1
+344	1031	7626719479898254	StanleyCraft.exe	7115ee0fd7891f95

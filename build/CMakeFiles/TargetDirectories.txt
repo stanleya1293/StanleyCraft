@@ -1,3 +1,0 @@
-C:/Users/Arden/OneDrive/Desktop/stanleya1293/build/CMakeFiles/StanleyCraft.dir
-C:/Users/Arden/OneDrive/Desktop/stanleya1293/build/CMakeFiles/edit_cache.dir
-C:/Users/Arden/OneDrive/Desktop/stanleya1293/build/CMakeFiles/rebuild_cache.dir

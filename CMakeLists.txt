@@ -1,6 +1,5 @@
 ﻿cmake_minimum_required (VERSION 3.8)
-
-project ("StanleyCraft")
+project("StanleyCraft")
 
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)

@@ -1,8 +1,0 @@
-# ninja log v6
-6	1398	7626715838462918	include/glad/glad.h	390ec33b107bdce9
-6	1398	7626715838462918	src/glad.c	390ec33b107bdce9
-6	1398	7626715838462918	C:/Users/Arden/OneDrive/Desktop/stanleya1293/build/vcpkg_installed/vcpkg/blds/glad/x64-windows-dbg/include/glad/glad.h	390ec33b107bdce9
-6	1398	7626715838462918	C:/Users/Arden/OneDrive/Desktop/stanleya1293/build/vcpkg_installed/vcpkg/blds/glad/x64-windows-dbg/src/glad.c	390ec33b107bdce9
-1399	1790	7626715839008552	CMakeFiles/glad.dir/src/glad.c.obj	cb5fe7efae60dff4
-1791	1869	7626715842915566	glad.lib	f45fecf443557ae2
-1870	1969	7626715843712384	CMakeFiles/install.util	27d6a486087a5e35

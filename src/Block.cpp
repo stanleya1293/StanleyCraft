@@ -1,7 +1,7 @@
 #include "Block.h"
 
 Block::Block(const std::string &dataPath) : 
-	vbo(0), vao(0)
+	vbo(0), vao(0), position(glm::mat4(0.0f))
 {
 	glGenVertexArrays(1, &vao);
 	glBindVertexArray(vao);
@@ -17,7 +17,7 @@ Block::Block(const std::string &dataPath) :
 
 void Block::render(const Shader& shader) const 
 {
-	shader.mat4();
+	shader.mat4("model", position);
 	glBindVertexArray(vao);
 	glDrawArrays(GL_TRIANGLES, 0, 36);
 }

@@ -12,6 +12,7 @@ public:
 private:
 	unsigned int vao;
 	unsigned int vbo;
+	glm::mat4 position;
 };
 
 

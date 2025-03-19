@@ -7,12 +7,13 @@
 
 class Block {
 public:
-	Block(const std::string &dataPath);
+	Block(const std::string &dataPath, glm::vec3 pos);
 	void render(const Shader &shader) const;
+	inline glm::mat4 getModel() const { return model; };
 private:
 	unsigned int vao;
 	unsigned int vbo;
-	glm::mat4 position;
+	glm::mat4 model;
 };
 
 

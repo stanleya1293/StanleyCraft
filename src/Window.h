@@ -7,10 +7,13 @@
 class Window {
 public:
 	Window(int width, int height, const std::string &title);
-	~Window();
+	inline float getAspectRatio() const { return aspectRatio; }
+	inline bool isOpen() const { return !glfwWindowShouldClose(baseWindow); }
+	void update() const;
 private:
 	int width;
 	int height;
+	float aspectRatio;
 	std::string title;
 	GLFWwindow* baseWindow;
 };

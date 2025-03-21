@@ -3,29 +3,30 @@
 #include <GLFW/glfw3.h>
 #include "Shader.h"
 #include "Block.h"
+#include "Camera.h"
+#include "Window.h"
 
 #ifdef _WIN32
 const std::string SOURCE_PATH = "C:/Users/Arden Stanley/Desktop/stanleya1293/StanleyCraft";
 #endif
 
 int main() {
-	glfwInit();
-	GLFWwindow* window = glfwCreateWindow(1000, 800, "StanleyCraft", NULL, NULL);
-	glfwMakeContextCurrent(window);
-	gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
-	glViewport(0, 0, 1000, 800);
-	glClearColor(0.5f, 0.0f, 0.0f, 1.0f);
+	Window window(1000, 800, "Test");
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
-	Shader defaultShader(SOURCE_PATH + "/shaders/default.vertex", SOURCE_PATH + "/shaders/default.fragment");
-	defaultShader.use();
+	Shader shader(SOURCE_PATH + "/shaders/default.vertex", SOURCE_PATH + "/shaders/default.fragment");
+	shader.use();
 
-	Block grassBlock("", { 0.0f, 0.0f, 0.0f });
+	Block block("", { 0.0f, 0.0f, 0.0f });
 
-	while (!glfwWindowShouldClose(window)) {
-		grassBlock.render(defaultShader);
-		glfwSwapBuffers(window);
-		glfwPollEvents();
-		glClear(GL_COLOR_BUFFER_BIT);
+	Camera camera({ 0.0f, 0.0f, 3.0f }, window);
+
+	while (window.isOpen()) {
+		shader.setMat4("model", block.getModel());
+		shader.setMat4("view", camera.getView());
+		shader.setMat4("projection", camera.getProjection());
+		block.render();
+		window.update();
 	}
 
 	return 0;

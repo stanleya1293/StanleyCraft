@@ -11,7 +11,7 @@ class Shader {
 public:
 	Shader(const std::string &vertexPath, const std::string &fragmentPath);
 	void use() const;
-	void mat4(const std::string &name, glm::mat4 data) const;
+	void setMat4(const std::string &name, glm::mat4 data) const;
 private:
 	enum Type {
 		Vertex,

@@ -1,9 +1,11 @@
 #include "Block.h"
 
-Block::Block(const std::string &dataPath, glm::vec3 pos) : 
+Block::Block(const std::string &dataPath, glm::vec3 position) : 
 	vbo(0), vao(0), 
-	model(glm::translate(glm::mat4(0.0f), pos))
+	model(glm::mat4(1.0f))
 {
+	model = glm::translate(model, position);
+
 	glGenVertexArrays(1, &vao);
 	glBindVertexArray(vao);
 	
@@ -16,9 +18,8 @@ Block::Block(const std::string &dataPath, glm::vec3 pos) :
 
 }
 
-void Block::render(const Shader& shader) const 
+void Block::render() const 
 {
-	shader.mat4("model", model);
 	glBindVertexArray(vao);
 	glDrawArrays(GL_TRIANGLES, 0, 36);
 }

@@ -15,7 +15,7 @@ void Shader::use() const
 	glUseProgram(this->program);
 }
 
-void Shader::mat4(const std::string &name, glm::mat4 data) const 
+void Shader::setMat4(const std::string &name, glm::mat4 data) const 
 {
 	int location = glGetUniformLocation(program, name.c_str());
 	glUniformMatrix4fv(location, 1, GL_FALSE, glm::value_ptr(data));

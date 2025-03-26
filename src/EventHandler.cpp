@@ -7,7 +7,7 @@ EventHandler::EventHandler()
 
 void EventHandler::handleCursorMovement(GLFWwindow *window, double xPos, double yPos)
 {
-	Camera *camera = reinterpret_cast<Camera*>(glfwGetWindowUserPointer(window));
+	Camera *camera = reinterpret_cast<Camera *>(glfwGetWindowUserPointer(window));
 	static bool first;
 	static float xLast;
 	static float yLast;
@@ -25,5 +25,5 @@ void EventHandler::handleCursorMovement(GLFWwindow *window, double xPos, double 
 
 void EventHandler::handleKeys(GLFWwindow *window, int key, int scancode, int action, int mods) 
 {
-	Camera* camera = reinterpret_cast<Camera*>(glfwGetWindowUserPointer(window));
+	Camera *camera = reinterpret_cast<Camera *>(glfwGetWindowUserPointer(window));
 }

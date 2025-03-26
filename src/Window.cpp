@@ -9,6 +9,8 @@ Window::Window(int width, int height, const std::string& title) :
 	glfwMakeContextCurrent(m_window);
 	gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
 	glViewport(0, 0, m_width, m_height);
+
+	
 }
 
 void Window::update() const
@@ -17,3 +19,4 @@ void Window::update() const
 	glfwPollEvents();
 	glClear(GL_COLOR_BUFFER_BIT);
 }
+

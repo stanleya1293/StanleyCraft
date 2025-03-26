@@ -14,15 +14,11 @@ public:
 	void rotate(float yawOffset, float pitchOffset);
 	inline glm::mat4 getView() const { return m_view; }
 	inline glm::mat4 getProjection() const { return m_projection; }
-
-	void processCursorMovement(double xPos, double yPos);
-
-	static void cursorMovementHandler(GLFWwindow* window, double xPos, double yPos);
 private:
 	glm::vec3 m_position;
 	float m_yaw;
 	float m_pitch;
-	glm::vec3 m_direction;
+	glm::vec3 m_cameraFront;
 	glm::mat4 m_view;
 	glm::mat4 m_projection;
 };

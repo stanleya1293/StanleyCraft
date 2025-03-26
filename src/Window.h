@@ -3,7 +3,7 @@
 #include <string>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "EventHandler.h"
+#include "Camera.h"
 
 class Window {
 public:
@@ -29,5 +29,7 @@ private:
 	GLFWwindow* m_window;
 
 };
+
+void handleCursorMovement(GLFWwindow* window, double xPos, double yPos);
 
 #endif

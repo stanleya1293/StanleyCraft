@@ -1,7 +1,7 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
-#include <vector>
+#include "dependencies.h"
 
 #include "Camera.h"
 #include "Shader.h"
@@ -10,13 +10,21 @@
 
 class Renderer {
 public:
+	
 	Renderer(Camera &camera, const Shader &shader);
-	void addBlock(Block &block);
-	void update();
+	
+	static const void addBlock(Block &block);
+	
+	static const void update();
+
 private:
-	Shader m_activeShader;
-	Camera m_activeCamera;
-	std::vector<Block> m_world;
+	
+	static Shader m_activeShader;
+	
+	static Camera m_activeCamera;
+	
+	static std::vector<Block> m_world;
+
 };
 
 #endif

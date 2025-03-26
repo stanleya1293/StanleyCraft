@@ -1,8 +1,7 @@
 #ifndef WINDOW_H
 #define WINDOW_H
-#include <string>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
+
+#include "dependencies.h"
 #include "Camera.h"
 
 class Window {
@@ -10,26 +9,25 @@ public:
 
 	Window(int width, int height, const std::string &title);
 
-	inline float getAspectRatio() const { return m_aspectRatio; }
+	static inline float getAspectRatio() { return m_aspectRatio; }
 
-	inline bool isOpen() const { return !glfwWindowShouldClose(m_window); }
+	static inline bool isOpen() { return !glfwWindowShouldClose(m_window); }
 
-	void update() const;
+	static const void update();
 
 private:
 
-	int m_width;
+	static int m_width;
 
-	int m_height;
+	static int m_height;
 
-	float m_aspectRatio;
+	static float m_aspectRatio;
 
-	std::string m_title;
+	static std::string m_title;
 
-	GLFWwindow* m_window;
+	static GLFWwindow* m_window;
 
 };
 
-void handleCursorMovement(GLFWwindow* window, double xPos, double yPos);
 
 #endif

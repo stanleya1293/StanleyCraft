@@ -12,16 +12,19 @@ public:
 	Camera(glm::vec3 position, const Window &window);
 	void move(float xOffset, float yOffset);
 	void rotate(float yawOffset, float pitchOffset);
-	inline glm::mat4 getView() const { return view; }
-	inline glm::mat4 getProjection() const { return projection; }
-	void pollKeys() const;
+	inline glm::mat4 getView() const { return m_view; }
+	inline glm::mat4 getProjection() const { return m_projection; }
+
+	void processCursorMovement(double xPos, double yPos);
+
+	static void cursorMovementHandler(GLFWwindow* window, double xPos, double yPos);
 private:
-	glm::vec3 position;
-	float yaw;
-	float pitch;
-	glm::vec3 direction;
-	glm::mat4 view;
-	glm::mat4 projection;
+	glm::vec3 m_position;
+	float m_yaw;
+	float m_pitch;
+	glm::vec3 m_direction;
+	glm::mat4 m_view;
+	glm::mat4 m_projection;
 };
 
 #endif

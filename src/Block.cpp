@@ -1,16 +1,16 @@
 #include "Block.h"
 
 Block::Block(const std::string &dataPath, glm::vec3 position) : 
-	vbo(0), vao(0), 
-	model(glm::mat4(1.0f))
+	m_vbo(0), m_vao(0), 
+	m_model(glm::mat4(1.0f))
 {
-	model = glm::translate(model, position);
+	m_model = glm::translate(m_model, position);
 
-	glGenVertexArrays(1, &vao);
-	glBindVertexArray(vao);
+	glGenVertexArrays(1, &m_vao);
+	glBindVertexArray(m_vao);
 	
-	glGenBuffers(1, &vbo);
-	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	glGenBuffers(1, &m_vbo);
+	glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(block_vertices), block_vertices, GL_STATIC_DRAW);
 
 	glEnableVertexAttribArray(0);
@@ -20,7 +20,7 @@ Block::Block(const std::string &dataPath, glm::vec3 position) :
 
 void Block::render() const 
 {
-	glBindVertexArray(vao);
+	glBindVertexArray(m_vao);
 	glDrawArrays(GL_TRIANGLES, 0, 36);
 }
 

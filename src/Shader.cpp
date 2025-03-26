@@ -1,27 +1,28 @@
 #include "Shader.h"
 
-Shader::Shader(const std::string& vertexPath, const std::string& fragmentPath)
+Shader::Shader(const std::string& vertexPath, const std::string& fragmentPath) :
+	m_program(0)
 {
 	unsigned int vertexShader = loadFile(vertexPath, Vertex);
 	unsigned int fragmentShader = loadFile(fragmentPath, Fragment);
-	this->program = glCreateProgram();
-	glAttachShader(this->program, vertexShader);
-	glAttachShader(this->program, fragmentShader);
-	glLinkProgram(this->program);
+	m_program = glCreateProgram();
+	glAttachShader(m_program, vertexShader);
+	glAttachShader(m_program, fragmentShader);
+	glLinkProgram(m_program);
 }
 
 void Shader::use() const 
 {
-	glUseProgram(this->program);
+	glUseProgram(m_program);
 }
 
 void Shader::setMat4(const std::string &name, glm::mat4 data) const 
 {
-	int location = glGetUniformLocation(program, name.c_str());
+	int location = glGetUniformLocation(m_program, name.c_str());
 	glUniformMatrix4fv(location, 1, GL_FALSE, glm::value_ptr(data));
 }
 
-unsigned int Shader::loadFile(const std::string &path, Type type) const 
+unsigned int Shader::loadFile(const std::string &path, Shader::Type type) const 
 {
 	std::ifstream file(path);
 	std::string shaderSrc;

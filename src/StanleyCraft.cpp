@@ -1,31 +1,33 @@
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
 #include "Shader.h"
 #include "Block.h"
 #include "Camera.h"
 #include "Window.h"
+#include "Renderer.h"
 
 #ifdef _WIN32
-const std::string SOURCE_PATH = "C:/Users/Arden Stanley/Desktop/stanleya1293/StanleyCraft";
+//const std::string SOURCE_PATH = "C:/Users/Arden Stanley/Desktop/stanleya1293/StanleyCraft";
+const std::string SOURCE_PATH = "C:/Users/Arden/source/repos/stanleya1293/StanleyCraft";
 #endif
 
 int main() {
 	Window window(1000, 800, "Test");
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
-	Shader shader(SOURCE_PATH + "/shaders/default.vertex", SOURCE_PATH + "/shaders/default.fragment");
-	shader.use();
+	Shader shader = Shader(SOURCE_PATH + "/shaders/default.vertex", SOURCE_PATH + "/shaders/default.fragment");
+	Camera camera = Camera(glm::vec3(0.0f, 0.0f, 3.0f), window);
 
-	Block block("", { 0.0f, 0.0f, 0.0f });
+	Block block = Block("", glm::vec3(0.0f, 0.0f, 0.0f));
 
-	Camera camera({ 0.0f, 0.0f, 3.0f }, window);
+	Renderer renderer = Renderer(camera, shader);
+
+	renderer.addBlock(block);
 
 	while (window.isOpen()) {
-		shader.setMat4("model", block.getModel());
-		shader.setMat4("view", camera.getView());
-		shader.setMat4("projection", camera.getProjection());
-		block.render();
+		renderer.update();
 		window.update();
 	}
 

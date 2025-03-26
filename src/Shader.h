@@ -17,9 +17,9 @@ private:
 		Vertex,
 		Fragment
 	};
-	unsigned int program;
+	unsigned int m_program;
 private: 
-	unsigned int loadFile(const std::string &path, Type type) const;
+	unsigned int loadFile(const std::string &path, Shader::Type type) const;
 };
 
 #endif

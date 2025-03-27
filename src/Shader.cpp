@@ -1,8 +1,10 @@
 #include "Shader.h"
 
+Shader::Shader() {}
+
 Shader::Shader(const std::string& vertexPath, const std::string& fragmentPath) :
-	m_program(0)
-{
+	m_program(0) {
+
 	unsigned int vertexShader = loadFile(vertexPath, Vertex);
 	unsigned int fragmentShader = loadFile(fragmentPath, Fragment);
 	m_program = glCreateProgram();
@@ -11,19 +13,16 @@ Shader::Shader(const std::string& vertexPath, const std::string& fragmentPath) :
 	glLinkProgram(m_program);
 }
 
-void Shader::use() const 
-{
+void Shader::use() const {
 	glUseProgram(m_program);
 }
 
-void Shader::setMat4(const std::string &name, glm::mat4 data) const 
-{
+void Shader::setMat4(const std::string &name, glm::mat4 data) const {
 	int location = glGetUniformLocation(m_program, name.c_str());
 	glUniformMatrix4fv(location, 1, GL_FALSE, glm::value_ptr(data));
 }
 
-unsigned int Shader::loadFile(const std::string &path, Shader::Type type) const 
-{
+unsigned int Shader::loadFile(const std::string &path, Shader::Type type) const {
 	std::ifstream file(path);
 	std::string shaderSrc;
 	std::stringstream shaderStream;

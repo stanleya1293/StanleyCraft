@@ -1,4 +1,5 @@
 #include "EventHandler.h"
+#include "Game.h"
 
 EventHandler::EventHandler() 
 {
@@ -7,7 +8,9 @@ EventHandler::EventHandler()
 
 void EventHandler::handleCursorMovement(GLFWwindow *window, double xPos, double yPos)
 {
-	Camera *camera = reinterpret_cast<Camera *>(glfwGetWindowUserPointer(window));
+	Game *game = reinterpret_cast<Game *>(glfwGetWindowUserPointer(window));
+	Camera &camera = game->getRenderer().getCamera();
+
 	static bool first;
 	static float xLast;
 	static float yLast;
@@ -19,11 +22,11 @@ void EventHandler::handleCursorMovement(GLFWwindow *window, double xPos, double 
 	}
 	else
 	{
-		camera->rotate(xPos - xLast, yPos - yLast);
+		camera.rotate(xPos - xLast, yPos - yLast);
 	}
 }
 
 void EventHandler::handleKeys(GLFWwindow *window, int key, int scancode, int action, int mods) 
 {
-	Camera *camera = reinterpret_cast<Camera *>(glfwGetWindowUserPointer(window));
+	
 }

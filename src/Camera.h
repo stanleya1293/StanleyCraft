@@ -7,8 +7,9 @@
 class Camera 
 {
 public:
-	
-	Camera(glm::vec3 position, const Window &window);
+	Camera();
+
+	Camera(glm::vec3 position, const Window& window);
 	
 	void move(float xOffset, float yOffset);
 	

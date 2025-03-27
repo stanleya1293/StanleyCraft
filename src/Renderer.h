@@ -10,20 +10,22 @@
 
 class Renderer {
 public:
+	Renderer();
 	
 	Renderer(Camera &camera, const Shader &shader);
 	
-	static const void addBlock(Block &block);
+	void addBlock(Block &block);
 	
-	static const void update();
+	void update();
 
+	inline Camera& getCamera() { return m_activeCamera; };
 private:
 	
-	static Shader m_activeShader;
+	Shader m_activeShader;
 	
-	static Camera m_activeCamera;
+	Camera m_activeCamera;
 	
-	static std::vector<Block> m_world;
+	std::vector<Block> m_world;
 
 };
 

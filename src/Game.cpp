@@ -5,7 +5,9 @@ const std::string SOURCE_PATH = "C:/Users/Arden Stanley/Desktop/stanleya1293/Sta
 //const std::string SOURCE_PATH = "C:/Users/Arden/source/repos/stanleya1293/StanleyCraft";
 #endif
 
-Game::Game() 
+Game::Game() : 
+	m_renderer(Renderer()),
+	m_window(Window())
 {
 	m_window = Window(1000, 800, "test");
 
@@ -15,14 +17,14 @@ Game::Game()
 	m_renderer = Renderer(camera, shader);
 
 	Block block = Block("", glm::vec3(0.0f, 0.0f, 0.0f));
+	m_renderer.addBlock(block);
 }
 
-const void Game::run()
+void Game::run()
 {
-	Renderer::addBlock(block);
 
-	while (Window::isOpen()) {
-		Renderer::update();
-		Window::update();
+	while (m_window.isOpen()) {
+		m_renderer.update();
+		m_window.update();
 	}
 }

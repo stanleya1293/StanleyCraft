@@ -2,30 +2,30 @@
 #define WINDOW_H
 
 #include "dependencies.h"
-#include "Camera.h"
 
 class Window {
 public:
+	Window();
 
 	Window(int width, int height, const std::string &title);
 
-	static inline float getAspectRatio() { return m_aspectRatio; }
+	inline float getAspectRatio() const { return m_aspectRatio; }
 
-	static inline bool isOpen() { return !glfwWindowShouldClose(m_window); }
+	inline bool isOpen() const { return !glfwWindowShouldClose(m_window); }
 
-	static const void update();
+	void update();
 
 private:
 
-	static int m_width;
+	int m_width;
 
-	static int m_height;
+	int m_height;
 
-	static float m_aspectRatio;
+	float m_aspectRatio;
 
-	static std::string m_title;
+	std::string m_title;
 
-	static GLFWwindow* m_window;
+	GLFWwindow* m_window;
 
 };
 

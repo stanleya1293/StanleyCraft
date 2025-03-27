@@ -1,11 +1,16 @@
 #include "Window.h"
 
-Window::Window(int width, int height, const std::string& title)
-{
-	m_width = width;
-	m_height = height;
-	m_title = title;
-	m_aspectRatio = (float) width / (float) height;
+Window::Window() {
+
+}
+
+Window::Window(int width, int height, const std::string& title) :
+	m_width(width),
+	m_height(height),
+	m_title(title),
+	m_aspectRatio((float) width / (float) height),
+	m_window(nullptr) {
+	
 	glfwInit();
 	m_window = glfwCreateWindow(m_width, m_height, m_title.c_str(), NULL, NULL);
 	glfwMakeContextCurrent(m_window);
@@ -13,8 +18,7 @@ Window::Window(int width, int height, const std::string& title)
 	glViewport(0, 0, m_width, m_height);
 }
 
-const void Window::update()
-{
+void Window::update() {
 	glfwSwapBuffers(m_window);
 	glfwPollEvents();
 	glClear(GL_COLOR_BUFFER_BIT);

@@ -12,13 +12,15 @@ public:
 	
 	Game();
 	
-	static const void run();
+	void run();
+
+	inline Renderer& getRenderer() { return m_renderer; };
 
 private:
 	
-	static Window m_window;
+	Window *m_window;
 	
-	static Renderer m_renderer;
+	Renderer *m_renderer;
 
 };
 

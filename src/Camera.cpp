@@ -1,5 +1,7 @@
 #include "Camera.h"
 
+Camera::Camera() {}
+
 Camera::Camera(glm::vec3 position, const Window& window) :
 	m_position(position),
 	m_yaw(-90.0f),
@@ -39,22 +41,4 @@ void Camera::rotate(float yawOffset, float pitchOffset)
 	direction.z = sin(glm::radians(m_yaw)) * cos(glm::radians(m_pitch));
 	m_cameraFront = glm::normalize(direction);
 	m_view = glm::lookAt(m_position, m_position + m_cameraFront, glm::vec3(0.0f, 1.0f, 0.0f));
-}
-
-void handleCursorMovement(GLFWwindow* window, double xPos, double yPos)
-{
-	Camera* camera = reinterpret_cast<Camera*>(glfwGetWindowUserPointer(window));
-	static bool first;
-	static float xLast;
-	static float yLast;
-	if (first)
-	{
-		xLast = xPos;
-		yLast = yPos;
-		first = false;
-	}
-	else
-	{
-		camera->rotate(xPos - xLast, yPos - yLast);
-	}
 }

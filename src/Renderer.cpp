@@ -1,6 +1,6 @@
 #include "Renderer.h"
 
-Renderer::Renderer(Camera& camera, const Shader& shader) {
+void Renderer::initialize(Camera& camera, const Shader& shader) {
 	m_activeShader = shader;
 	m_activeCamera = camera;
 	m_activeShader.use();

@@ -2,7 +2,7 @@
 
 
 int main() {
-	Game StanleyCraft;
-	StanleyCraft.run();
+	Game::initialize();
+	Game::run();
 	return 0;
 }

@@ -2,8 +2,6 @@
 #define BLOCK_H
 
 #include "dependencies.h"
-#include "Shader.h"
-#include "glad/glad.h"
 
 class Block {
 public:

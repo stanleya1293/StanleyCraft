@@ -18,9 +18,9 @@ public:
 
 private:
 	
-	Window *m_window;
+	Window m_window;
 	
-	Renderer *m_renderer;
+	Renderer m_renderer;
 
 };
 

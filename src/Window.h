@@ -2,31 +2,20 @@
 #define WINDOW_H
 
 #include "dependencies.h"
+#include "EventHandler.h"
 
 class Window {
 public:
-	Window();
-
 	Window(int width, int height, const std::string &title);
-
-	inline float getAspectRatio() const { return m_aspectRatio; }
-
-	inline bool isOpen() const { return !glfwWindowShouldClose(m_window); }
-
-	void update();
-
+	static inline float getAspectRatio() { return m_aspectRatio; }
+	static inline bool isOpen() { return !glfwWindowShouldClose(m_window); }
+	static void update();
 private:
-
-	int m_width;
-
-	int m_height;
-
-	float m_aspectRatio;
-
-	std::string m_title;
-
-	GLFWwindow* m_window;
-
+	static int m_width;
+	static int m_height;
+	static float m_aspectRatio;
+	static std::string m_title;
+	static GLFWwindow* m_window;
 };
 
 

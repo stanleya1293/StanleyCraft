@@ -1,11 +1,8 @@
 #include "Renderer.h"
 
-
-Renderer::Renderer() {}
-
-Renderer::Renderer(Camera& camera, const Shader& shader) :
-	m_activeShader(shader),
-	m_activeCamera(camera) {
+Renderer::Renderer(Camera& camera, const Shader& shader) {
+	m_activeShader = shader;
+	m_activeCamera = camera;
 	m_activeShader.use();
 }
 

@@ -1,32 +1,26 @@
 #include "EventHandler.h"
 #include "Game.h"
 
-EventHandler::EventHandler() 
-{
-	
+EventHandler::EventHandler() {
+
 }
 
-void EventHandler::handleCursorMovement(GLFWwindow *window, double xPos, double yPos)
-{
-	Game *game = reinterpret_cast<Game *>(glfwGetWindowUserPointer(window));
-	Camera &camera = game->getRenderer().getCamera();
+void EventHandler::handleCursorMovement(GLFWwindow *window, double xPos, double yPos) {
+	Camera camera = Renderer::getCamera();
 
-	static bool first;
+	static bool first = true;
 	static float xLast;
 	static float yLast;
-	if (first)
-	{
+	if (first) {
 		xLast = xPos;
 		yLast = yPos;
 		first = false;
 	}
-	else
-	{
+	else {
 		camera.rotate(xPos - xLast, yPos - yLast);
 	}
 }
 
-void EventHandler::handleKeys(GLFWwindow *window, int key, int scancode, int action, int mods) 
-{
+void EventHandler::handleKeys(GLFWwindow *window, int key, int scancode, int action, int mods) {
 	
 }

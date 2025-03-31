@@ -5,23 +5,19 @@
 #include "Renderer.h"
 #include "Camera.h"
 #include "Block.h"
+#include "EventHandler.h"
 
 class Game 
 {
 public:
-	
 	Game();
-	
-	void run();
-
-	inline Renderer& getRenderer() { return m_renderer; };
-
+	static void run();
+	static inline Renderer& getRenderer() { return m_renderer; };
+	static inline Window& getWindow() { return m_window; }
 private:
-	
-	Window m_window;
-	
-	Renderer m_renderer;
-
+	static Window m_window;
+	static Renderer m_renderer;
+	static EventHandler m_eventHandler;
 };
 
 #endif

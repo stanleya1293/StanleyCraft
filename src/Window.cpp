@@ -1,21 +1,17 @@
 #include "Window.h"
 
-Window::Window() {
+Window::Window(int width, int height, const std::string& title) {
+	m_width = width;
+	m_height = height;
+	m_title = title;
+	m_aspectRatio = (float)width / (float)height;
 
-}
-
-Window::Window(int width, int height, const std::string& title) :
-	m_width(width),
-	m_height(height),
-	m_title(title),
-	m_aspectRatio((float) width / (float) height),
-	m_window(nullptr) {
-	
 	glfwInit();
 	m_window = glfwCreateWindow(m_width, m_height, m_title.c_str(), NULL, NULL);
 	glfwMakeContextCurrent(m_window);
 	gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
 	glViewport(0, 0, m_width, m_height);
+	glfwSetCursorPosCallback(m_window, EventHandler::handleCursorMovement);
 }
 
 void Window::update() {

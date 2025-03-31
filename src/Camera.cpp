@@ -2,7 +2,7 @@
 
 Camera::Camera() {}
 
-Camera::Camera(glm::vec3 position, const Window& window) :
+Camera::Camera(glm::vec3 position) :
 	m_position(position),
 	m_yaw(-90.0f),
 	m_pitch(0.0f),
@@ -16,7 +16,7 @@ Camera::Camera(glm::vec3 position, const Window& window) :
 	direction.z = sin(glm::radians(m_yaw)) * cos(glm::radians(m_pitch));
 	m_cameraFront = glm::normalize(direction);
 	m_view = glm::lookAt(m_position, m_position + m_cameraFront, glm::vec3(0.0f, 1.0f, 0.0f));
-	m_projection = glm::perspective(45.0f, window.getAspectRatio(), 0.1f, 100.0f);
+	m_projection = glm::perspective(45.0f, Window::getAspectRatio(), 0.1f, 100.0f);
 }
 
 void Camera::move(float xOffset, float zOffset) 

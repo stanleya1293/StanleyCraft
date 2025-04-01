@@ -28,7 +28,7 @@ void InputHandler::processInput() {
 		camera.move(Camera::Left);
 	}
 	if (glfwGetKey(Window::getBaseWindow(), GLFW_KEY_S)) {
-		camera.move(Camera::Backward);
+		camera.move(Camera::Backward)
 	}
 	if (glfwGetKey(Window::getBaseWindow(), GLFW_KEY_D)) {
 		camera.move(Camera::Right);

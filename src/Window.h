@@ -3,19 +3,32 @@
 
 #include "dependencies.h"
 
+enum Keys {
+	W,
+	A,
+	S,
+	D
+};
+
 class Window {
 public:
-	static void initialize(int width, int height, const std::string &title);
-	static inline float getAspectRatio() { return m_aspectRatio; }
-	static inline bool isOpen() { return !glfwWindowShouldClose(m_window); }
-	static void update();
-	static inline GLFWwindow* getBaseWindow() { return m_window; }
+	Window(int width, int height, const std::string &title);
+	inline float getAspectRatio() { return m_aspectRatio; }
+	inline bool isOpen() { return !glfwWindowShouldClose(m_window); }
+	void update();
+	inline GLFWwindow* getBaseWindow() { return m_window; }
+	void addKeyCallback(Keys key, const std::function<void()>& callback);  
+	void onKeyCallback(int key);
+	
+	static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 private:
-	inline static int m_width;
-	inline static int m_height;
-	inline static float m_aspectRatio;
-	inline static std::string m_title;
-	inline static GLFWwindow* m_window;
+	int m_width;
+	int m_height;
+	float m_aspectRatio;
+	std::string m_title;
+	GLFWwindow* m_window;
+
+	std::map<Keys, std::function<void()>> m_callbacks;
 };
 
 

@@ -3,10 +3,8 @@
 
 #include "dependencies.h"
 
-class Camera 
-{
+class Camera {
 public:
-	Camera();
 	Camera(glm::vec3 position, float aspectRatio);
 	enum Direction {
 		Left,
@@ -16,8 +14,8 @@ public:
 	};
 	void move(Direction direction);
 	void rotate(float yawOffset, float pitchOffset);
-	inline glm::mat4 getView() const { return m_view; }
-	inline glm::mat4 getProjection() const { return m_projection; }
+	inline glm::mat4 getView() { return m_view; }
+	inline glm::mat4 getProjection() { return m_projection; }
 private:
 	glm::vec3 m_position;
 	float m_yaw;

@@ -11,5 +11,8 @@
 #include <vector>
 #include <sstream>
 #include <iostream>
+#include <memory>
+#include <functional>
+#include <map>
 
 #endif

@@ -1,8 +1,8 @@
 #include "Game.h"
 
 #ifdef _WIN32
-//const std::string SOURCE_PATH = "C:/Users/Arden Stanley/Desktop/stanleya1293/StanleyCraft";
-const std::string SOURCE_PATH = "C:/Users/Arden/source/repos/stanleya1293/StanleyCraft";
+const std::string SOURCE_PATH = "C:/Users/Arden Stanley/Desktop/stanleya1293/StanleyCraft";
+//const std::string SOURCE_PATH = "C:/Users/Arden/source/repos/stanleya1293/StanleyCraft";
 #endif
 
 Game::Game() : m_window(nullptr), m_renderer(nullptr) {
@@ -13,8 +13,6 @@ Game::Game() : m_window(nullptr), m_renderer(nullptr) {
 
 	m_renderer = std::make_unique<Renderer>(shader, camera);
 
-	Block block = Block("", glm::vec3(0.0f, 0.0f, 0.0f));
-	m_renderer->addBlock(block);
 
 	m_window->addKeyCallback(Keys::A, [=]() { camera->move(Camera::Left); });
 	m_window->addKeyCallback(Keys::W, [=]() { camera->move(Camera::Forward); });

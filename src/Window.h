@@ -16,7 +16,6 @@ public:
 	inline float getAspectRatio() { return m_aspectRatio; }
 	inline bool isOpen() { return !glfwWindowShouldClose(m_window); }
 	void update();
-	inline GLFWwindow* getBaseWindow() { return m_window; }
 	void addKeyCallback(Keys key, const std::function<void()>& callback);  
 	void onKeyCallback(int key);
 	
@@ -27,7 +26,7 @@ private:
 	float m_aspectRatio;
 	std::string m_title;
 	GLFWwindow* m_window;
-
+	
 	std::map<Keys, std::function<void()>> m_callbacks;
 };
 
